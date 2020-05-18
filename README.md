@@ -1,8 +1,8 @@
 # i18n-angular
 
-<div  style="text-align: center;">
+<p align="center">
     <img src="./src/assets/i18n-angular.gif" alt="i18n-angular"/>
-</div>
+</p>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
