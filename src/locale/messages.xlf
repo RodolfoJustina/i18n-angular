@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="header_welcome" datatype="html">
+        <source>Welcome</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description"> Welcome message in the header</note>
+        <note priority="1" from="meaning">Header Message </note>
+      </trans-unit>
+      <trans-unit id="highlight_card_message" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ title }}"/> app is running!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+        <note priority="1" from="description"> Message inside the highlight
+        card</note>
+        <note priority="1" from="meaning">
+        Highlight Card </note>
+      </trans-unit>
+      <trans-unit id="body_resources_title" datatype="html">
+        <source>Resources</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+        <note priority="1" from="description"> Body title</note>
+        <note priority="1" from="meaning">Resources </note>
+      </trans-unit>
+      <trans-unit id="body_resources_info" datatype="html">
+        <source>Here are some examples how you can run your application in development for each locale.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">111</context>
+        </context-group>
+        <note priority="1" from="description"> Body informations how to use the internalization
+      in Angular projects</note>
+        <note priority="1" from="meaning">
+      Resources Informations </note>
+      </trans-unit>
+      <trans-unit id="footer_question" datatype="html">
+        <source>
+      Like this project? </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+        <note priority="1" from="description"> Do you like this project</note>
+        <note priority="1" from="meaning">Footer Question </note>
+      </trans-unit>
+      <trans-unit id="footer_star" datatype="html">
+        <source>
+        Give me repo a star.
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+        <note priority="1" from="description"> Give me repo a star</note>
+        <note priority="1" from="meaning">Footer Star </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
