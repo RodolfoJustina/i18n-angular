@@ -1,6 +1,6 @@
 # i18n-angular
 
-![i18n-angular](https://github.com/RodolfoDella/i18n-angular/tree/master/src/assets/i18n-angular.gif)
+<img src="./src/assets/i18n-angular.gif" alt="i18n-angular"/>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
