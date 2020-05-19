@@ -48,3 +48,69 @@ Run `ng serve --configurations=pt` or just `ng serve --c=pt` for a dev server an
 To default build run `ng build` to build the project or run `ng build --c=production-en && ng build --c=production-es && ng build --c=production-pt` to build the project for all locales.
 
 The build artefacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running on server
+
+To test this application, I simulate environment production using Docker. For understand, when you compile a version to deploy in production, you will need to generate one for each locale and to use a proxy to do the redirections.
+
+Bellow, I show you the container structure and follow how I created a simple container to run this project.
+
+### The structure
+
+```
+├── app
+│   ├── i18n-en
+│   ├── i18n-es
+│   └── i18n-pt
+├── default.conf
+└── docker-compose.yml
+```
+
+### The `default.conf` file
+
+```
+server {
+    listen 80;
+
+    location /en {
+      alias /usr/share/nginx/html/i18n-en/;
+      try_files $uri$args $uri$args/ $uri $uri/ /index.html;
+    }
+
+    location /es {
+      alias /usr/share/nginx/html/i18n-es/;
+      try_files $uri$args $uri$args/ $uri $uri/ /index.html;
+    }
+
+    location /pt {
+      alias /usr/share/nginx/html/i18n-pt/;
+      try_files $uri$args $uri$args/ $uri $uri/ /index.html;
+    }
+
+    location / {
+      alias /usr/share/nginx/html/i18n-pt/;
+      try_files $uri$args $uri$args/ $uri $uri/ /index.html;
+    }
+
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+      root /usr/share/nginx/html;
+    }
+}
+```
+
+### The `docker-compose.yml` file
+
+```
+web:
+  image: nginx
+  container_name: nginx
+  volumes:
+    - ./default.conf:/etc/nginx/conf.d/default.conf
+    - ./app:/usr/share/nginx/html/
+  ports:
+    - "80:80"
+
+```
+
+> If you prefer to run without a `docker-compose` file, feel free to do it. I did that because I like to organize all files in a folder.
