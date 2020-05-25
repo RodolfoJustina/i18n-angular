@@ -86,8 +86,8 @@
                 }
               ],
               "i18nFile": "src/locale/messages.en.xlf",
-              "outputPath": "dist/i18n-en/",
-              "baseHref": "/en/",
+              "outputPath": "dist/i18n-angular/en/",
+              "baseHref": "/i18n-angular/en/",
               "i18nFormat": "xlf",
               "i18nLocale": "en",
               "i18nMissingTranslation": "error"
@@ -121,8 +121,8 @@
                 }
               ],
               "i18nFile": "src/locale/messages.es.xlf",
-              "outputPath": "dist/i18n-es/",
-              "baseHref": "/es/",
+              "outputPath": "dist/i18n-angular/es/",
+              "baseHref": "/i18n-angular/es/",
               "i18nFormat": "xlf",
               "i18nLocale": "es",
               "i18nMissingTranslation": "error"
@@ -156,8 +156,8 @@
                 }
               ],
               "i18nFile": "src/locale/messages.pt.xlf",
-              "outputPath": "dist/i18n-pt/",
-              "baseHref": "/pt/",
+              "outputPath": "dist/i18n-angular/pt/",
+              "baseHref": "/i18n-angular/pt/",
               "i18nFormat": "xlf",
               "i18nLocale": "pt",
               "i18nMissingTranslation": "error"
@@ -165,8 +165,8 @@
             "en": {
               "aot": true,
               "i18nFile": "src/locale/messages.en.xlf",
-              "outputPath": "dist/i18n-en/",
-              "baseHref": "/en/",
+              "outputPath": "dist/i18n-angular/en/",
+              "baseHref": "/i18n-angular/en/",
               "i18nFormat": "xlf",
               "i18nLocale": "en",
               "i18nMissingTranslation": "error"
@@ -174,8 +174,8 @@
             "es": {
               "aot": true,
               "i18nFile": "src/locale/messages.es.xlf",
-              "outputPath": "dist/i18n-es/",
-              "baseHref": "/es/",
+              "outputPath": "dist/i18n-angular/es/",
+              "baseHref": "/i18n-angular/es/",
               "i18nFormat": "xlf",
               "i18nLocale": "es",
               "i18nMissingTranslation": "error"
@@ -183,8 +183,8 @@
             "pt": {
               "aot": true,
               "i18nFile": "src/locale/messages.pt.xlf",
-              "outputPath": "dist/i18n-pt/",
-              "baseHref": "/pt/",
+              "outputPath": "dist/i18n-angular/pt/",
+              "baseHref": "/i18n-angular/pt/",
               "i18nFormat": "xlf",
               "i18nLocale": "pt",
               "i18nMissingTranslation": "error"
@@ -246,6 +246,15 @@
             "production": {
               "devServerTarget": "i18n-angular:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "no-build": true,
+            "baseHref": "https://rodolfodella.github.io/i18n-angular/",
+            "name": "Rodolfo Faquin Della Justina",
+            "email": "rodolfofaquin@gmail.com"
           }
         }
       }
