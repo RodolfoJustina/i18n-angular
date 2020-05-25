@@ -10,7 +10,7 @@ export class AppComponent {
 
   locales = [
     { code: 'en', label: 'English' },
-    { code: 'es', label: 'Espanol' },
+    { code: 'es', label: 'Spanish' },
     { code: 'pt', label: 'Portuguese' },
   ];
 
